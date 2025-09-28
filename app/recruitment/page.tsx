@@ -343,7 +343,7 @@ const RecruitmentPage = () => {
                   <p className="text-gray-500">{voice.position}</p>
                   <p className="text-sm text-accent">{voice.years}</p>
                 </div>
-                <p className="text-gray-700 italic">"{voice.message}"</p>
+                <p className="text-gray-700 italic">&ldquo;{voice.message}&rdquo;</p>
               </motion.div>
             ))}
           </div>

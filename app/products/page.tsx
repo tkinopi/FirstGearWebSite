@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { FaTools, FaRecycle, FaLeaf, FaShieldAlt, FaGlobe, FaCheckCircle, FaAward, FaIndustry } from 'react-icons/fa'
 
 const ProductsPage = () => {
@@ -162,10 +163,11 @@ const ProductsPage = () => {
               >
                 <div className={`h-32 bg-gradient-to-r ${product.color} flex items-center justify-center relative overflow-hidden`}>
                   {product.imageType === 'file' ? (
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.title}
-                      className="object-cover w-full h-full"
+                      fill
+                      className="object-cover"
                     />
                   ) : (
                     <div className="text-6xl">{product.image}</div>
