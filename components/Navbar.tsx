@@ -10,13 +10,13 @@ const Navbar = () => {
   const [languageDropdown, setLanguageDropdown] = useState(false)
 
   const navItems = [
-    { name: 'リビルト事業', href: '#rebuilt' },
-    { name: '製品案内', href: '#products' },
-    { name: '海外事業', href: '#overseas' },
-    { name: '企業情報', href: '#company' },
-    { name: 'アクセス', href: '#access' },
-    { name: '採用情報', href: '#recruitment' },
-    { name: 'お問い合わせ', href: '#contact' },
+    { name: 'リビルト事業', href: '/rebuilt' },
+    { name: '製品案内', href: '/products' },
+    // { name: '海外事業', href: '#overseas' },
+    { name: '企業情報', href: '/company' },
+    // { name: 'アクセス', href: '#access' },
+    { name: '採用情報', href: '/recruitment' },
+    { name: 'お問い合わせ', href: '/contact' },
   ]
 
   const languages = [
@@ -32,14 +32,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, repeatDelay: 5 }}
+            <div
               className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center"
             >
               <span className="text-white font-bold text-xl">FG</span>
-            </motion.div>
+            </div>
             <div>
               <h1 className="text-2xl font-bold text-primary">FirstGear</h1>
               <p className="text-xs text-gray-600">Automotive Excellence</p>

@@ -6,28 +6,26 @@ const Footer = () => {
     {
       title: '事業内容',
       links: [
-        { name: 'リビルト事業', href: '#rebuilt' },
-        { name: '製品案内', href: '#products' },
-        { name: '海外事業', href: '#overseas' },
-        { name: '技術研修', href: '#training' },
+        { name: 'リビルト事業', href: '/rebuilt' },
+        { name: '製品案内', href: '/products' },
       ],
     },
     {
       title: '企業情報',
       links: [
-        { name: '会社概要', href: '#about' },
-        { name: '沿革', href: '#history' },
-        { name: 'アクセス', href: '#access' },
-        { name: 'SDGsへの取り組み', href: '#sdgs' },
+        { name: '会社概要', href: '/company' },
+        { name: '沿革', href: '/company#history' },
+        { name: '企業理念', href: '/company#philosophy' },
+        { name: 'アクセス', href: '/company#access' },
       ],
     },
     {
-      title: '採用情報',
+      title: 'お問い合わせ',
       links: [
-        { name: '募集要項', href: '#recruitment' },
-        { name: '社員インタビュー', href: '#interviews' },
-        { name: '福利厚生', href: '#benefits' },
-        { name: 'キャリアパス', href: '#career' },
+        { name: '採用情報', href: '/recruitment' },
+        { name: 'お問い合わせフォーム', href: '/contact' },
+        { name: 'よくある質問', href: '/contact#faq' },
+        { name: '電話でのお問い合わせ', href: '/contact#phone' },
       ],
     },
   ]
@@ -48,6 +46,12 @@ const Footer = () => {
               自動車電装品リビルト事業を通じて、
               持続可能な社会の実現に貢献します。
             </p>
+            <div className="text-sm text-gray-400 mb-4">
+              <p>〒590-0138</p>
+              <p>大阪府堺市南区金室978-1</p>
+              <p>TEL: 072-298-9273</p>
+              <p>FAX: 072-298-9274</p>
+            </div>
             {/* Social Links */}
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-accent transition-colors">
@@ -89,16 +93,16 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2024 FirstGear. All rights reserved.
+              © 2024 株式会社FirstGear. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
                 プライバシーポリシー
               </Link>
-              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
                 利用規約
               </Link>
-              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <Link href="/sitemap" className="text-sm text-gray-400 hover:text-white transition-colors">
                 サイトマップ
               </Link>
             </div>

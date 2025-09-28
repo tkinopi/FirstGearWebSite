@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Global Section */}
-      <section className="section-padding bg-dark text-white">
+      {/* <section className="section-padding bg-dark text-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -228,7 +228,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary to-accent text-white">
@@ -246,7 +246,7 @@ export default function Home() {
               あなたのスキルを活かして、一緒に成長しましょう。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#recruitment" className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all">
+              <Link href="/recruitment" className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all">
                 採用情報を見る
               </Link>
               <Link href="#contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all">
