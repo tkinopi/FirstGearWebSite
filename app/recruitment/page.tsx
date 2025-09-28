@@ -11,7 +11,7 @@ import {
 
 const RecruitmentPage = () => {
   const router = useRouter()
-  const [activeCategory, setActiveCategory] = useState('newgrad')
+  const [activeCategory, setActiveCategory] = useState<'newgrad' | 'career' | 'parttime'>('newgrad')
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
