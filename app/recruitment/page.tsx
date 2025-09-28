@@ -19,7 +19,7 @@ const RecruitmentPage = () => {
     transition: { duration: 0.6 }
   }
 
-  const jobCategories = [
+  const jobCategories: Array<{ id: 'newgrad' | 'career' | 'parttime'; label: string; icon: JSX.Element }> = [
     { id: 'newgrad', label: '新卒採用', icon: <FaGraduationCap /> },
     { id: 'career', label: '中途採用', icon: <FaBriefcase /> },
     { id: 'parttime', label: 'パート・アルバイト', icon: <FaClock /> }
