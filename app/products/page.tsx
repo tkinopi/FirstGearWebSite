@@ -16,67 +16,49 @@ const ProductsPage = () => {
 
   const productCategories = [
     {
-      title: 'オルタネーター',
-      description: '発電機として車両の電力を供給する重要な部品',
-      warranty: '保証期間：2年または40,000km',
-      features: ['完全分解整備', '新品部品使用', '性能テスト実施'],
-      image: '/images/car_alternator.png',
+      title: 'マニュアルトランスミッション（MT）',
+      description: '2トン・4トン車両対応の手動変速機',
+      warranty: '対応メーカー：いすゞ、日野、三菱ふそう',
+      features: ['完全分解整備', '長期使用前提', 'フルオーバーホール'],
+      image: '/images/transmission_2tMT.png',
       imageType: 'file',
       color: 'from-blue-500 to-blue-700'
     },
     {
-      title: '高出力オルタネーター',
-      description: '高負荷車両向けの強化型発電機',
-      warranty: '保証期間：1年または20,000km',
-      features: ['高出力対応', 'コイル強化', '冷却性能向上'],
-      image: '/images/car_alternator.png',
+      title: 'オートマチックトランスミッション（AT）',
+      description: '2トン・4トン車両対応の自動変速機',
+      warranty: '対応メーカー：いすゞ、日野、三菱ふそう',
+      features: ['電子制御対応', '精密調整', '性能テスト実施'],
+      image: '/images/transmission_2tAT.png',
       imageType: 'file',
       color: 'from-green-500 to-green-700'
     },
     {
-      title: 'スターター',
-      description: 'エンジン始動時に必要不可欠なセルモーター',
-      warranty: '保証期間：2年または40,000km',
-      features: ['ブラシ新品交換', 'コミテータ研磨', '作動テスト済み'],
-      image: '/images/car_starter.png',
+      title: 'スムーサー',
+      description: 'いすゞのAMT（自動MT）システム',
+      warranty: '対応メーカー：いすゞ',
+      features: ['AMT専門技術', '電子制御対応', '完全整備'],
+      image: '/images/smoother.png',
       imageType: 'file',
       color: 'from-purple-500 to-purple-700'
     },
     {
-      title: 'コンプレッサー',
-      description: 'エアコンシステムの心臓部となる冷媒圧縮機',
-      warranty: '保証期間：1年または20,000km',
-      features: ['シール類新品', '冷媒充填テスト', '圧力テスト実施'],
-      image: '/images/car_compressor.png',
+      title: 'デュオニック',
+      description: '日野のAMT（自動MT）システム',
+      warranty: '対応メーカー：日野',
+      features: ['AMT専門技術', '電子制御対応', '完全整備'],
+      image: '/images/DUONIC.png',
       imageType: 'file',
       color: 'from-cyan-500 to-cyan-700'
     },
     {
-      title: 'ディストリビューター',
-      description: '点火タイミングを制御する重要な部品',
-      warranty: '保証期間：2年または40,000km',
-      features: ['接点研磨', 'ベアリング交換', 'タイミング調整'],
-      image: '/images/car_distributor.png',
+      title: 'GSU（ギアシフトユニット）',
+      description: '三菱ふそうのAMT（自動MT）システム',
+      warranty: '対応メーカー：三菱ふそう',
+      features: ['AMT専門技術', '電子制御対応', '完全整備'],
+      image: '/images/GSU.png',
       imageType: 'file',
       color: 'from-orange-500 to-orange-700'
-    },
-    {
-      title: 'DPF触媒',
-      description: 'ディーゼル車の排気ガス浄化装置',
-      warranty: '保証期間：1年（運輸業除く）',
-      features: ['触媒洗浄', '詰まり除去', '性能復元'],
-      image: '/images/car_dpf.png',
-      imageType: 'file',
-      color: 'from-yellow-500 to-yellow-700'
-    },
-    {
-      title: 'インジェクター',
-      description: '燃料噴射を制御する精密部品',
-      warranty: '保証期間：1年（運輸業除く）',
-      features: ['ノズル交換', '噴射パターン調整', '燃圧テスト'],
-      image: '/images/car_injector.png',
-      imageType: 'file',
-      color: 'from-red-500 to-red-700'
     }
   ]
 
@@ -103,14 +85,6 @@ const ProductsPage = () => {
     }
   ]
 
-  const remanufacturingProcess = [
-    { step: '受入検査', description: '詳細な初期診断と状態確認', icon: '📋' },
-    { step: '分解・洗浄', description: '専用設備による完全分解と洗浄', icon: '🔧' },
-    { step: '部品検査', description: '摩耗部品の交換と精密測定', icon: '🔍' },
-    { step: '組立・調整', description: '熟練技術者による精密組立', icon: '⚙️' },
-    { step: '性能検査', description: '実負荷テストによる性能確認', icon: '✅' },
-    { step: '出荷', description: '厳格な最終検査後、迅速配送', icon: '📦' }
-  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
@@ -148,7 +122,7 @@ const ProductsPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">取扱商品</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              自動車電装品のスペシャリストとして、幅広い製品を取り扱っています
+              2トン・4トン車両のトランスミッション専門。いすゞ、日野、三菱ふそうに対応
             </p>
           </motion.div>
 
@@ -224,7 +198,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Remanufacturing Process */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             {...fadeInUp}
@@ -259,7 +233,7 @@ const ProductsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications & Standards */}
       <section className="py-20 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">

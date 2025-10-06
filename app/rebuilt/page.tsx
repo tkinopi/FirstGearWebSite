@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { FaTools, FaCogs, FaCheckCircle, FaRecycle, FaShieldAlt, FaTruck } from 'react-icons/fa'
+import Image from 'next/image'
+import { FaCogs, FaCheckCircle, FaShieldAlt, FaTruck } from 'react-icons/fa'
 
 const RebuiltPage = () => {
   const router = useRouter()
@@ -15,44 +16,44 @@ const RebuiltPage = () => {
 
   const services = [
     {
-      icon: <FaTools />,
-      title: 'エンジンリビルト',
-      description: 'ガソリン・ディーゼルエンジンの完全分解・再生。厳格な品質基準による検査と保証付き。',
-      features: ['完全分解整備', '純正部品使用', '性能テスト実施', '長期保証付き']
+      icon: <FaTruck />,
+      title: '対応車両',
+      description: '2トン・4トン車両のトランスミッション専門。主要3メーカーに対応。',
+      features: ['いすゞ', '日野', '三菱ふそう', 'その他要相談']
     },
     {
       icon: <FaCogs />,
-      title: 'トランスミッションリビルト',
-      description: 'AT/MT/CVTの専門的なリビルト。最新診断機器による徹底的な検査。',
-      features: ['全タイプ対応', '電子制御対応', '走行テスト実施', '交換保証制度']
+      title: '対応トランスミッション',
+      description: 'MT・AT・AMTなど、各種トランスミッションに幅広く対応。',
+      features: ['マニュアル(MT)', 'オートマチック(AT)', 'スムーサー', 'GSU/デュオニック']
     },
     {
-      icon: <FaRecycle />,
-      title: 'ターボチャージャーリビルト',
-      description: '精密バランス調整による高品質なターボチャージャーの再生。',
-      features: ['精密バランス調整', 'ベアリング交換', '耐久性向上', '即日対応可能']
+      icon: <FaShieldAlt />,
+      title: '専門特化の強み',
+      description: 'トランスミッションリビルト専門だからこそ実現できる高品質と信頼性。',
+      features: ['専門技術の蓄積', '豊富な実績', '厳格な品質管理', '迅速な対応']
     }
   ]
 
   const process = [
-    { number: '01', title: '受入検査', description: '詳細な初期診断と状態確認' },
-    { number: '02', title: '分解・洗浄', description: '専用設備による完全分解と洗浄' },
-    { number: '03', title: '部品検査・交換', description: '摩耗部品の交換と精密測定' },
-    { number: '04', title: '組立・調整', description: '熟練技術者による精密組立' },
-    { number: '05', title: '性能検査', description: '実負荷テストによる性能確認' },
-    { number: '06', title: '出荷', description: '厳格な最終検査後、迅速配送' }
+    { number: '01', title: '受入検査', description: '詳細な初期診断と状態確認', image: '/images/acceptance_inspection.png' },
+    { number: '02', title: '分解・洗浄', description: '専用設備による完全分解と洗浄', image: '/images/washing.png' },
+    { number: '03', title: '部品検査・交換', description: '摩耗部品の交換と精密測定', image: '/images/parts_inspection_and_exchange.png' },
+    { number: '04', title: '組立・調整', description: '熟練技術者による精密組立', image: '/images/assembly_adjustment.png' },
+    { number: '05', title: '性能検査', description: '実負荷テストによる性能確認', image: '/images/performance_inspection.png' },
+    { number: '06', title: '出荷', description: '厳格な最終検査後、迅速配送', image: '/images/shipping.png' }
   ]
 
   const benefits = [
     {
       icon: <FaShieldAlt className="text-4xl text-primary" />,
-      title: '高品質保証',
-      description: '新品同等の性能と耐久性を実現。全製品に保証書を発行。'
+      title: 'フルオーバーホール',
+      description: '長く使用することを前提とした徹底的な整備。\n新品同等の性能と耐久性を実現。'
     },
     {
-      icon: <FaRecycle className="text-4xl text-green-500" />,
-      title: '環境配慮',
-      description: '資源の有効活用により、環境負荷を大幅に削減。'
+      icon: <FaCheckCircle className="text-4xl text-green-500" />,
+      title: '充実のアフターフォロー',
+      description: '納品後のフォローもしっかり対応。\n安心して長くご使用いただけます。'
     },
     {
       icon: <FaTruck className="text-4xl text-blue-500" />,
@@ -77,8 +78,8 @@ const RebuiltPage = () => {
               リビルト事業
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              最先端の技術と豊富な経験により、新品同等の品質を実現。
-              環境に配慮しながら、お客様のコスト削減に貢献します。
+              2トン・4トントラックのトランスミッションリビルト専門。
+              いすゞ、日野、三菱ふそうに特化した専門技術で、確かな品質をお届けします。
             </p>
             <div className="flex justify-center gap-4">
               <button className="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-primary-dark transition-colors">
@@ -102,9 +103,9 @@ const RebuiltPage = () => {
             {...fadeIn}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold mb-4">リビルトサービス</h2>
+            <h2 className="text-4xl font-bold mb-4">トランスミッションリビルト専門</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              各種自動車部品の専門的なリビルトサービスを提供しています
+              2トン・4トントラック（いすゞ・日野・三菱ふそう）に特化した専門サービス
             </p>
           </motion.div>
 
@@ -147,20 +148,30 @@ const RebuiltPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {process.map((step, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold">
-                  {step.number}
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    {step.number}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2 ml-6">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -191,7 +202,7 @@ const RebuiltPage = () => {
               >
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-gray-600 whitespace-pre-line">{benefit.description}</p>
               </motion.div>
             ))}
           </div>

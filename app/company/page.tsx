@@ -56,6 +56,7 @@ const CompanyPage = () => {
 
   const tabs = [
     { id: 'overview', label: '会社概要', icon: <FaBuilding /> },
+    { id: 'message', label: '社長挨拶', icon: <FaUsers /> },
     { id: 'history', label: '沿革', icon: <FaHistory /> },
     { id: 'philosophy', label: '企業理念', icon: <FaAward /> },
     { id: 'access', label: 'アクセス', icon: <FaMapMarkerAlt /> }
@@ -230,6 +231,117 @@ const CompanyPage = () => {
                       <p className="text-gray-700">{item}</p>
                     </div>
                   ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+      )}
+
+      {activeTab === 'message' && (
+        <motion.section
+          key="message"
+          {...fadeInUp}
+          className="py-20"
+        >
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl font-bold text-center mb-12">社長挨拶</h2>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="bg-white rounded-2xl shadow-2xl overflow-hidden"
+              >
+                <div className="md:flex">
+                  {/* Profile Image Area */}
+                  <div className="md:w-1/3 bg-gradient-to-br from-primary to-accent p-8 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-40 h-40 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <FaUsers className="text-6xl text-primary" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">山田 義夫</h3>
+                      <p className="text-white/90">代表取締役社長</p>
+                    </div>
+                  </div>
+
+                  {/* Message Content */}
+                  <div className="md:w-2/3 p-8 md:p-12">
+                    <div className="space-y-6 text-gray-700 leading-relaxed">
+                      <p className="text-lg">
+                        この度は、株式会社FirstGearのホームページをご覧いただき、誠にありがとうございます。
+                      </p>
+
+                      <p>
+                        私は18歳の時、高校生の頃に出会ったホンダ・シビックをきっかけに車の世界に魅了され、ガソリンスタンドに就職いたしました。
+                        そこで様々な車に触れる中で、車をイジることの楽しさ、メンテナンスの重要性を肌で感じ、整備士資格を取得。
+                        趣味ではサーキット走行を楽しみながら、車への情熱を深めていきました。
+                      </p>
+
+                      <p>
+                        その後、トラックドライバーとして働く中で、前職での経験を活かし社内で整備も担当するようになりました。
+                        実際にトラックを運転し、現場の声を聞きながら整備に携わる経験は、今の私の原点となっています。
+                      </p>
+
+                      <p>
+                        そして、リビルトトランスミッションの会社に出会い、専門的な技術を学ぶ機会に恵まれました。
+                        様々なトランスミッションの構造、特性を深く学ぶ中で、この分野の奥深さと重要性を実感いたしました。
+                      </p>
+
+                      <p className="font-semibold text-primary">
+                        FirstGearは、2トン・4トン車両のトランスミッションリビルトに特化した専門企業です。
+                        いすゞ、日野、三菱ふそうの3メーカーに絞り込むことで、より深い専門知識と技術を蓄積してまいりました。
+                      </p>
+
+                      <p>
+                        長く使用していただくことを前提としたフルオーバーホール、そして納品後のしっかりとしたアフターフォロー。
+                        これらは、現場で働いてきた私自身が「こうあってほしい」と願ってきたサービスそのものです。
+                      </p>
+
+                      <p>
+                        車を愛し、技術を磨き続けてきた私たちだからこそ提供できる価値があると信じております。
+                        お客様の大切な車両を、確かな技術でサポートさせていただきます。
+                      </p>
+
+                      <p className="text-right mt-8">
+                        <span className="text-gray-600">株式会社FirstGear</span><br />
+                        <span className="text-xl font-bold text-primary">代表取締役社長　山田 義夫</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Career Timeline */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-12 bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8"
+              >
+                <h3 className="text-2xl font-bold mb-8 text-center text-primary">社長の歩み</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-3xl mb-3">🏫</div>
+                    <h4 className="font-bold text-lg mb-2 text-primary">高校時代</h4>
+                    <p className="text-gray-600 text-sm">ホンダ・シビックとの出会いから車への情熱が芽生える</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-3xl mb-3">⛽</div>
+                    <h4 className="font-bold text-lg mb-2 text-primary">18〜25歳</h4>
+                    <p className="text-gray-600 text-sm">ガソリンスタンドで整備士資格取得。趣味でサーキット走行</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-3xl mb-3">🚚</div>
+                    <h4 className="font-bold text-lg mb-2 text-primary">25〜30歳</h4>
+                    <p className="text-gray-600 text-sm">トラックドライバーとして勤務。社内で整備も担当</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-3xl mb-3">⚙️</div>
+                    <h4 className="font-bold text-lg mb-2 text-primary">30歳〜現在</h4>
+                    <p className="text-gray-600 text-sm">リビルトトランスミッション専門企業で技術を習得し、FirstGear創業</p>
+                  </div>
                 </div>
               </motion.div>
             </div>
