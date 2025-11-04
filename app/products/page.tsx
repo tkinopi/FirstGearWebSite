@@ -17,7 +17,7 @@ const ProductsPage = () => {
   const productCategories = [
     {
       title: 'マニュアルトランスミッション（MT）',
-      description: '2トン・4トン車両対応の手動変速機',
+      description: '2~10トン超車両対応の手動変速機',
       warranty: '対応メーカー：いすゞ、日野、三菱ふそう',
       features: ['完全分解整備', '長期使用前提', 'フルオーバーホール'],
       image: '/images/transmission_2tMT.png',
@@ -26,7 +26,7 @@ const ProductsPage = () => {
     },
     {
       title: 'オートマチックトランスミッション（AT）',
-      description: '2トン・4トン車両対応の自動変速機',
+      description: '2~10トン超車両対応の自動変速機',
       warranty: '対応メーカー：いすゞ、日野、三菱ふそう',
       features: ['電子制御対応', '精密調整', '性能テスト実施'],
       image: '/images/transmission_2tAT.png',
@@ -55,7 +55,7 @@ const ProductsPage = () => {
       title: 'GSU（ギアシフトユニット）',
       description: '三菱ふそうのAMT（自動MT）システム',
       warranty: '対応メーカー：三菱ふそう',
-      features: ['AMT専門技術', '電子制御対応', '完全整備'],
+      features: ['AMT専門技術', '電子制御対応', '分解'],
       image: '/images/GSU.png',
       imageType: 'file',
       color: 'from-orange-500 to-orange-700'
@@ -103,7 +103,7 @@ const ProductsPage = () => {
             </h1>
             <p className="text-xl text-gray-700 mb-8">
               当社リビルト製品は全て新品と同等の機能を有しています。コア（中古部品）を完全分解し、洗浄したのち、各部を点検、清拭しており、
-              製品を新品に交換します。これらの工程をクリアした製品のみを専用の白いプロダクツボックスで出荷をしています。
+              製品を新品に交換します。
             </p>
             <p className="text-lg text-gray-600">
               実際した製品はごとに専用の検査機器を使用してベンチテストを行い工場出荷前に異常がないことを確認の上で数に載せた品質の保証を行っているものの中、
@@ -122,7 +122,7 @@ const ProductsPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">取扱商品</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              2トン・4トン車両のトランスミッション専門。いすゞ、日野、三菱ふそうに対応
+              2~10トン超車両のトランスミッション専門。いすゞ、日野、などに対応
             </p>
           </motion.div>
 

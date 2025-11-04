@@ -18,7 +18,7 @@ const RebuiltPage = () => {
     {
       icon: <FaTruck />,
       title: '対応車両',
-      description: '2トン・4トン車両のトランスミッション専門。主要3メーカーに対応。',
+      description: '2~10トン超車両のトランスミッション専門。主要3メーカーに対応。',
       features: ['いすゞ', '日野', '三菱ふそう', 'その他要相談']
     },
     {
@@ -78,8 +78,8 @@ const RebuiltPage = () => {
               リビルト事業
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              2トン・4トントラックのトランスミッションリビルト専門。
-              いすゞ、日野、三菱ふそうに特化した専門技術で、確かな品質をお届けします。
+              2~10トン超トラックのトランスミッションリビルト専門。
+              いすゞ、日野、三菱ふそうなどに特化した専門技術で、確かな品質をお届けします。
             </p>
             <div className="flex justify-center gap-4">
               <button className="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-primary-dark transition-colors">
@@ -105,7 +105,7 @@ const RebuiltPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">トランスミッションリビルト専門</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              2トン・4トントラック（いすゞ・日野・三菱ふそう）に特化した専門サービス
+              2~10トン超トラック（いすゞ・日野・三菱ふそうなど）に特化した専門サービス
             </p>
           </motion.div>
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaBuilding, FaCalendarAlt, FaUsers, FaYenSign, FaPhone, FaMapMarkerAlt, FaIndustry, FaGlobeAsia, FaHandshake, FaChartLine, FaAward, FaHistory, FaCar, FaTrain, FaDirections, FaEnvelope } from 'react-icons/fa'
+import { FaBuilding, FaCalendarAlt, FaUsers, FaYenSign, FaPhone, FaMapMarkerAlt, FaIndustry, FaGlobeAsia, FaHandshake, FaChartLine, FaAward, FaHistory, FaDirections, FaEnvelope } from 'react-icons/fa'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -64,11 +64,6 @@ const CompanyPage = () => {
 
   const accessInfo = {
     address: '〒590-0138 大阪府堺市南区金室978-1',
-    nearestStation: [
-      { line: '泉北高速鉄道', station: '栂・美木多駅', time: '車で約10分' },
-      { line: '南海高野線', station: '金剛駅', time: '車で約15分' }
-    ],
-    parking: '完備（20台）',
     businessHours: '平日 9:00-18:00 / 土曜 9:00-17:00',
     holidays: '日曜・祝日・年末年始'
   }
@@ -133,8 +128,7 @@ const CompanyPage = () => {
                 transition={{ duration: 0.6 }}
                 className="mb-12 bg-gradient-to-r from-primary to-accent p-8 rounded-2xl shadow-2xl text-white"
               >
-                <h2 className="text-4xl font-bold mb-4">{companyInfo.name}</h2>
-                <p className="text-xl opacity-90">FirstGear - Automotive Excellence Since 1973</p>
+                <h2 className="text-4xl font-bold">{companyInfo.name}</h2>
               </motion.div>
 
               {/* Info Grid */}
@@ -290,8 +284,8 @@ const CompanyPage = () => {
                       </p>
 
                       <p className="font-semibold text-primary">
-                        FirstGearは、2トン・4トン車両のトランスミッションリビルトに特化した専門企業です。
-                        いすゞ、日野、三菱ふそうの3メーカーに絞り込むことで、より深い専門知識と技術を蓄積してまいりました。
+                        FirstGearは、2~10トン超車両のトランスミッションリビルトに特化した専門企業です。
+                        いすゞ、日野、三菱ふそうなどに絞り込むことで、より深い専門知識と技術を蓄積してまいりました。
                       </p>
 
                       <p>
@@ -500,11 +494,11 @@ const CompanyPage = () => {
               </div>
 
               {/* Access Information */}
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="max-w-3xl mx-auto">
                 {/* Address & Contact */}
                 <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   className="bg-white rounded-2xl shadow-xl p-8"
                 >
@@ -529,41 +523,6 @@ const CompanyPage = () => {
                           FAX: {companyInfo.fax}
                         </p>
                       </div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Transportation */}
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-white rounded-2xl shadow-xl p-8"
-                >
-                  <h3 className="text-2xl font-bold mb-6 text-primary flex items-center">
-                    <FaTrain className="mr-3" />
-                    交通アクセス
-                  </h3>
-                  <div className="space-y-4">
-                    {accessInfo.nearestStation.map((station, index) => (
-                      <div key={index} className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <div className="flex items-start">
-                          <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
-                            {index + 1}
-                          </div>
-                          <div>
-                            <p className="font-semibold text-gray-700">{station.line}</p>
-                            <p className="text-gray-600">{station.station}</p>
-                            <p className="text-sm text-accent mt-1">{station.time}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                    <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                      <p className="text-blue-700 flex items-center">
-                        <FaCar className="mr-2" />
-                        駐車場：{accessInfo.parking}
-                      </p>
                     </div>
                   </div>
                 </motion.div>

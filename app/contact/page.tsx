@@ -66,27 +66,6 @@ const ContactPage = () => {
     setIsSubmitted(true)
   }
 
-  const quickActions = [
-    {
-      title: 'カタログダウンロード',
-      description: '製品カタログをPDFでダウンロード',
-      icon: <FaFileAlt className="text-3xl text-blue-500" />,
-      action: 'ダウンロード'
-    },
-    {
-      title: '見積もり依頼',
-      description: 'オンラインで簡単見積もり',
-      icon: <FaShoppingCart className="text-3xl text-green-500" />,
-      action: '見積もり'
-    },
-    {
-      title: '技術サポート',
-      description: '技術的なご質問にお答えします',
-      icon: <FaQuestionCircle className="text-3xl text-purple-500" />,
-      action: 'サポート'
-    }
-  ]
-
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20 flex items-center justify-center">
@@ -148,36 +127,6 @@ const ContactPage = () => {
             </p>
           </div>
         </motion.div>
-      </section>
-
-      {/* Quick Actions */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            {...fadeInUp}
-            className="text-2xl font-bold text-center mb-8"
-          >
-            よくご利用いただくサービス
-          </motion.h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {quickActions.map((action, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow cursor-pointer"
-              >
-                <div className="mb-4 flex justify-center">{action.icon}</div>
-                <h3 className="text-lg font-bold mb-2">{action.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{action.description}</p>
-                <button className="px-6 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full font-semibold hover:shadow-lg transition-all">
-                  {action.action}
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Main Content */}
