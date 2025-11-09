@@ -301,17 +301,12 @@ const ProductsPage = () => {
             <p className="text-white/90 text-xl mb-8 max-w-2xl mx-auto">
               豊富な在庫と専門知識でお客様のニーズにお応えします
             </p>
-            <div className="flex justify-center gap-4">
-              <button className="px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                製品カタログダウンロード
-              </button>
-              <button
-                onClick={() => router.push('/contact')}
-                className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-primary transition-colors"
-              >
-                お問い合わせ
-              </button>
-            </div>
+            <button
+              onClick={() => router.push('/contact')}
+              className="px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 transition-colors"
+            >
+              お問い合わせ
+            </button>
           </motion.div>
         </div>
       </section>

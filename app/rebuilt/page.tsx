@@ -81,17 +81,12 @@ const RebuiltPage = () => {
               2~10トン超トラックのトランスミッションリビルト専門。
               いすゞ、日野、三菱ふそうなどに特化した専門技術で、確かな品質をお届けします。
             </p>
-            <div className="flex justify-center gap-4">
-              <button className="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-primary-dark transition-colors">
-                カタログダウンロード
-              </button>
-              <button
-                onClick={() => router.push('/contact')}
-                className="px-8 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-colors"
-              >
-                お問い合わせ
-              </button>
-            </div>
+            <button
+              onClick={() => router.push('/contact')}
+              className="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-primary-dark transition-colors"
+            >
+              お問い合わせ
+            </button>
           </motion.div>
         </div>
       </section>
@@ -224,7 +219,10 @@ const RebuiltPage = () => {
               専門スタッフが最適なリビルトソリューションをご提案いたします
             </p>
             <div className="flex justify-center gap-4">
-              <button className="px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 transition-colors">
+              <button
+                onClick={() => router.push('/contact')}
+                className="px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 transition-colors"
+              >
                 見積もり依頼
               </button>
               <button

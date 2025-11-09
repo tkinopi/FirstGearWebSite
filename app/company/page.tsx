@@ -2,12 +2,35 @@
 
 import { motion } from 'framer-motion'
 import { FaBuilding, FaCalendarAlt, FaUsers, FaYenSign, FaPhone, FaMapMarkerAlt, FaIndustry, FaGlobeAsia, FaHandshake, FaChartLine, FaAward, FaHistory, FaDirections, FaEnvelope } from 'react-icons/fa'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 const CompanyPage = () => {
   const router = useRouter()
   const [activeTab, setActiveTab] = useState('overview')
+
+  // URLハッシュに基づいてタブを設定
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '')
+    if (hash && ['overview', 'message', 'history', 'philosophy', 'access'].includes(hash)) {
+      setActiveTab(hash)
+    }
+  }, [])
+
+  // ハッシュ変更を監視
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash && ['overview', 'message', 'history', 'philosophy', 'access'].includes(hash)) {
+        setActiveTab(hash)
+      } else if (!hash) {
+        setActiveTab('overview')
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -17,17 +40,16 @@ const CompanyPage = () => {
 
   const companyInfo = {
     name: '株式会社 FirstGear',
-    headquarters: '大阪府堺市南区金室978-1',
+    headquarters: '大阪府豊中市利倉2丁目18番24号',
     branches: ['大阪'],
-    tel: '072-298-9273',
-    fax: '072-298-9274',
-    established: '平成17年4月11日',
-    capital: '300万円',
-    ceo: '代表取締役社長　山田 義夫',
-    employees: '107名（2024年10月現在、派遣社員含む）',
+    tel: '06-6676-7002',
+    fax: '06-6676-7003',
+    established: '2023年8月15日',
+    capital: '750万円',
+    ceo: '代表取締役社長　石橋　優二朗',
+    employees: '3名',
     business: [
-      '自動車部品の修理及び再生（リビルト）',
-      '自動車部品および自動車用品類の製造、販売'
+      '自動車部品の修理及び再生（リビルト）'
     ]
   }
 
@@ -45,25 +67,25 @@ const CompanyPage = () => {
 
   const philosophy = {
     vision: 'ものづくり、ひとづくり。',
-    mission: '大気汚染の最も大きな原因は、自動車による排気ガスです。世界で最も大気汚染が進んでいる国バングラデシュは、世界ガスによる汚染物質排出を続録するため、エネルギー源を高価な石油やガスから石炭に移行し、バングラディシュ産業の国内発電所に頼る私人税を軽減しています。',
+    mission: '確かな技術で自動車部品を再生し、持続可能な社会の実現に貢献します。',
     sdgs: [
-      { number: 12, title: 'つくる責任つかう責任', description: 'リビルト事業を通じて資源の有効活用を推進' },
-      { number: 8, title: '働きがいも経済成長も', description: '技術革新による持続可能な経済成長を実現' },
-      { number: 4, title: '質の高い教育をみんなに', description: '海外での技術教育・人材育成プロジェクト実施' },
-      { number: 8, title: 'パートナーシップで目標を達成しよう', description: 'JICAとともにバングラデシュで発展させることで、現地での人材確保活動を推進' }
+      { number: 1, title: 'つくる責任つかう責任', description: 'リビルト事業を通じて資源の有効活用を推進し、廃棄物削減に貢献' },
+      { number: 2, title: '働きがいも経済成長も', description: '技術革新による持続可能な経済成長と、働きがいのある職場環境を実現' },
+      { number: 3, title: '産業と技術革新の基盤をつくろう', description: '高品質なリビルト部品の提供で、自動車産業の基盤を支える' },
+      { number: 4, title: '気候変動に具体的な対策を', description: '部品再生により新品製造時と比較してCO2排出量を大幅に削減' }
     ]
   }
 
   const tabs = [
     { id: 'overview', label: '会社概要', icon: <FaBuilding /> },
     { id: 'message', label: '社長挨拶', icon: <FaUsers /> },
-    { id: 'history', label: '沿革', icon: <FaHistory /> },
+    // { id: 'history', label: '沿革', icon: <FaHistory /> },
     { id: 'philosophy', label: '企業理念', icon: <FaAward /> },
     { id: 'access', label: 'アクセス', icon: <FaMapMarkerAlt /> }
   ]
 
   const accessInfo = {
-    address: '〒590-0138 大阪府堺市南区金室978-1',
+    address: '〒561-0845 大阪府豊中市利倉2丁目18番24号',
     businessHours: '平日 9:00-18:00 / 土曜 9:00-17:00',
     holidays: '日曜・祝日・年末年始'
   }
@@ -97,7 +119,10 @@ const CompanyPage = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => {
+                  setActiveTab(tab.id)
+                  window.history.pushState(null, '', `#${tab.id}`)
+                }}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
                   activeTab === tab.id
                     ? 'bg-primary text-white shadow-lg transform scale-105'
@@ -255,7 +280,7 @@ const CompanyPage = () => {
                       <div className="w-40 h-40 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
                         <FaUsers className="text-6xl text-primary" />
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">山田 義夫</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">石橋 優二朗</h3>
                       <p className="text-white/90">代表取締役社長</p>
                     </div>
                   </div>
@@ -300,7 +325,7 @@ const CompanyPage = () => {
 
                       <p className="text-right mt-8">
                         <span className="text-gray-600">株式会社FirstGear</span><br />
-                        <span className="text-xl font-bold text-primary">代表取締役社長　山田 義夫</span>
+                        <span className="text-xl font-bold text-primary">代表取締役社長　石橋 優二朗</span>
                       </p>
                     </div>
                   </div>
@@ -481,7 +506,7 @@ const CompanyPage = () => {
               <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
                 <div className="relative h-96 bg-gradient-to-br from-gray-100 to-gray-200">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.8899999999996!2d135.48333333333334!3d34.48333333333334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDI5JzAwLjAiTiAxMzXCsDI5JzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890"
+                    src="https://maps.google.com/maps?q=大阪府豊中市利倉2丁目18番24号&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -563,7 +588,7 @@ const CompanyPage = () => {
                 className="mt-12 text-center"
               >
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=大阪府堺市南区金室978-1"
+                  href="https://www.google.com/maps/search/?api=1&query=大阪府豊中市利倉２丁目１８−２４"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-full font-semibold hover:shadow-xl transform hover:scale-105 transition-all"

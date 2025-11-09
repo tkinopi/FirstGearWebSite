@@ -3,11 +3,10 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [languageDropdown, setLanguageDropdown] = useState(false)
 
   const navItems = [
     { name: 'リビルト事業', href: '/rebuilt' },
@@ -17,13 +16,6 @@ const Navbar = () => {
     // { name: 'アクセス', href: '#access' },
     { name: '採用情報', href: '/recruitment' },
     { name: 'お問い合わせ', href: '/contact' },
-  ]
-
-  const languages = [
-    { code: 'ja', name: '日本語' },
-    { code: 'en', name: 'English' },
-    { code: 'bn', name: 'বাংলা' },
-    { code: 'zh', name: '中文' },
   ]
 
   return (
@@ -54,37 +46,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            
-            {/* Language Selector */}
-            <div className="relative">
-              <button
-                onClick={() => setLanguageDropdown(!languageDropdown)}
-                className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors"
-              >
-                <FaGlobe />
-                <span className="text-sm">JA</span>
-              </button>
-              
-              <AnimatePresence>
-                {languageDropdown && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl py-2"
-                  >
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        className="block w-full px-4 py-2 text-left text-gray-700 hover:bg-primary hover:text-white transition-colors"
-                      >
-                        {lang.name}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}

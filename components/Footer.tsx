@@ -14,7 +14,7 @@ const Footer = () => {
       title: '企業情報',
       links: [
         { name: '会社概要', href: '/company' },
-        { name: '沿革', href: '/company#history' },
+        { name: '社長挨拶', href: '/company#message' },
         { name: '企業理念', href: '/company#philosophy' },
         { name: 'アクセス', href: '/company#access' },
       ],
@@ -47,10 +47,10 @@ const Footer = () => {
               持続可能な社会の実現に貢献します。
             </p>
             <div className="text-sm text-gray-400 mb-4">
-              <p>〒590-0138</p>
-              <p>大阪府堺市南区金室978-1</p>
-              <p>TEL: 072-298-9273</p>
-              <p>FAX: 072-298-9274</p>
+              <p>〒561-0845</p>
+              <p>大阪府豊中市利倉2丁目18番24号</p>
+              <p>TEL: 06-6676-7002</p>
+              <p>FAX: 06-6676-7003</p>
             </div>
             {/* Social Links */}
             <div className="flex space-x-4">
