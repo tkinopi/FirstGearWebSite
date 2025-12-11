@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { FaBuilding, FaCalendarAlt, FaUsers, FaYenSign, FaPhone, FaMapMarkerAlt, FaIndustry, FaGlobeAsia, FaHandshake, FaChartLine, FaAward, FaHistory, FaDirections, FaEnvelope } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
@@ -54,14 +55,6 @@ const CompanyPage = () => {
   }
 
   const timeline = [
-    { year: '1973年9月', event: '大阪府堺市寺地町にてオートモービルサービスを設立し、祖業の自動車整備業を開始', icon: <FaBuilding /> },
-    { year: '1977年', event: '大阪陸運局より、自動車整備二種認証工場として認定を受ける', icon: <FaAward /> },
-    { year: '1978年', event: '中央自動車工業よりリビルト製造を受託し、スターター・オルタネーターのリビルト技術を習得', icon: <FaIndustry /> },
-    { year: '1982年', event: '阪堺自動車協同組合に加入し、整備業を拡大', icon: <FaHandshake /> },
-    { year: '1987年', event: '大阪府堺市辻之にて大光電機株式会社を設立し、オートモービルサービスを自動車部として吸収', icon: <FaBuilding /> },
-    { year: '同年', event: '岡山県後月郡に自動車部品再生工場を設立し、ディストリビューターのリビルトと輸出を開始', icon: <FaGlobeAsia /> },
-    { year: '1998年', event: '阪南自動車よりイグニッション部品の製造権を取得し、コンタクトポイント・コンデンサーの製造を開始', icon: <FaIndustry /> },
-    { year: '2001年', event: '大阪府堺市金室978の1に新社屋を建設', icon: <FaBuilding /> },
     { year: '2005年4月', event: '大光電機株式会社から国内再生部門を分社化し、有限会社大光サービスを新たに設立', icon: <FaChartLine /> }
   ]
 
@@ -277,8 +270,14 @@ const CompanyPage = () => {
                   {/* Profile Image Area */}
                   <div className="md:w-1/3 bg-gradient-to-br from-primary to-accent p-8 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-40 h-40 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <FaUsers className="text-6xl text-primary" />
+                      <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-lg">
+                        <Image
+                          src="/images/president_front.jpg"
+                          alt="代表取締役社長 石橋 優二朗"
+                          width={300}
+                          height={300}
+                          className="object-cover w-full h-full scale-[2] object-[center_-30%]"
+                        />
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">石橋 優二朗</h3>
                       <p className="text-white/90">代表取締役社長</p>

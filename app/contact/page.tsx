@@ -79,15 +79,44 @@ const ContactPage = () => {
     }))
   }
 
+  const [errorMessage, setErrorMessage] = useState('')
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMessage('')
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          inquiryType: formData.inquiryType,
+          companyName: formData.companyName,
+          department: formData.department,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'メールの送信に失敗しました')
+      }
+
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setErrorMessage(error instanceof Error ? error.message : 'エラーが発生しました。しばらく経ってから再度お試しください。')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -316,6 +345,13 @@ const ContactPage = () => {
                       </span>
                     </label>
                   </div>
+
+                  {/* Error Message */}
+                  {errorMessage && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+                      {errorMessage}
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <motion.button

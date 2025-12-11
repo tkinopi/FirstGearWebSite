@@ -19,11 +19,11 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.firstgeardirect.com'), // 実際のドメインに変更してください
   title: {
-    default: 'FirstGear - 自動車電装品リビルト事業 | なおす、つながる、ひろがっていく',
+    default: 'FirstGear - 自動車マニュアルトランスミッションリビルト事業 | なおす、つながる、ひろがっていく',
     template: '%s | FirstGear',
   },
-  description: 'なおす、つながる、ひろがっていく。自動車電装品リビルト事業から世界へ。高品質なオルタネーター、スターター、コンプレッサーのリビルト品を提供し、持続可能な社会に貢献します。',
-  keywords: ['自動車', 'リビルト', '電装品', 'オルタネーター', 'スターター', 'コンプレッサー', 'FirstGear', '環境', 'SDGs', 'バングラデシュ', '海外展開'],
+  description: 'なおす、とどける、みらいへつなぐ。自動車マニュアルトランスミッションリビルト事業から世界へ。高品質なオルタネーター、スターター、コンプレッサーのリビルト品を提供し、持続可能な社会に貢献します。',
+  keywords: ['自動車', 'リビルト', '電装品', 'スターター', 'コンプレッサー', 'FirstGear', '環境', 'SDGs', 'バングラデシュ', '海外展開'],
   authors: [{ name: 'FirstGear' }],
   creator: 'FirstGear',
   publisher: 'FirstGear',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     url: 'https://www.firstgeardirect.com',
     siteName: 'FirstGear',
-    title: 'FirstGear - 自動車電装品リビルト事業',
-    description: 'なおす、つながる、ひろがっていく。自動車電装品リビルト事業から世界へ',
+    title: 'FirstGear - 自動車マニュアルトランスミッションリビルト事業',
+    description: 'なおす、とどける、みらいへつなぐ。自動車マニュアルトランスミッションリビルト事業から世界へ',
     images: [
       {
         url: '/og-image.png', // OGP画像を用意してください
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FirstGear - 自動車電装品リビルト事業',
-    description: 'なおす、つながる、ひろがっていく。自動車電装品リビルト事業から世界へ',
+    title: 'FirstGear - 自動車マニュアルトランスミッションリビルト事業',
+    description: 'なおす、とどける、みらいへつなぐ。自動車マニュアルトランスミッションリビルト事業から世界へ',
     images: ['/og-image.png'], // OGP画像を用意してください
   },
   robots: {

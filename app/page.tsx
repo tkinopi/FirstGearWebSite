@@ -9,22 +9,22 @@ import HeroSlideshow from '@/components/HeroSlideshow'
 export default function Home() {
   const services = [
     {
-      title: 'オルタネーター',
-      description: '高品質なリビルトオルタネーターを提供',
+      title: 'マニュアル(MT)',
+      description: '高精度なマニュアルトランスミッションのリビルト',
       icon: <FaCogs />,
-      image: '/images/car_alternator.png',
+      image: '/images/transmission_mt.png',
     },
     {
-      title: 'スターター',
-      description: '信頼性の高いスターターモーター',
-      icon: <FaRocket />,
-      image: '/images/car_starter.png',
+      title: 'スムーサー',
+      description: '商用車向けスムーサーのリビルト',
+      icon: <FaCogs />,
+      image: '/images/transmission_smoother.png',
     },
     {
-      title: 'コンプレッサー',
-      description: '効率的なエアコンコンプレッサー',
-      icon: <FaRecycle />,
-      image: '/images/car_compressor.png',
+      title: 'GSU/デュオニック',
+      description: '先進のデュアルクラッチトランスミッションのリビルト',
+      icon: <FaCogs />,
+      image: '/images/transmission_gsu.png',
     },
   ]
 
@@ -51,9 +51,9 @@ export default function Home() {
           >
             なおす、
             <br />
-            つながる、
+            とどける、
             <br />
-            <span className="heading-gradient">ひろがっていく。</span>
+            <span className="heading-gradient">みらいへつなぐ。</span>
           </motion.h1>
           
           <motion.p
@@ -62,7 +62,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
           >
-            自動車電装品リビルト事業から世界へ
+            自動車マニュアルトランスミッションリビルト事業から世界へ
           </motion.p>
           
           <motion.div
@@ -104,12 +104,12 @@ export default function Home() {
               リビルト事業
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              高品質な自動車電装品のリビルトを通じて、
+              高品質なトランスミッションのリビルトを通じて、
               持続可能な社会に貢献します
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}

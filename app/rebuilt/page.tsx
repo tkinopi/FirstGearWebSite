@@ -25,7 +25,7 @@ const RebuiltPage = () => {
       icon: <FaCogs />,
       title: '対応トランスミッション',
       description: 'MT・AT・AMTなど、各種トランスミッションに幅広く対応。',
-      features: ['マニュアル(MT)', 'オートマチック(AT)', 'スムーサー', 'GSU/デュオニック']
+      features: ['マニュアル(MT)', 'スムーサー', 'GSU/デュオニック']
     },
     {
       icon: <FaShieldAlt />,
@@ -37,7 +37,7 @@ const RebuiltPage = () => {
 
   const process = [
     { number: '01', title: '受入検査', description: '詳細な初期診断と状態確認', image: '/images/acceptance_inspection.png' },
-    { number: '02', title: '分解・洗浄', description: '専用設備による完全分解と洗浄', image: '/images/washing.png' },
+    { number: '02', title: '分解・洗浄', description: '専用設備による完全分解と洗浄', image: '/images/washing.png', imagePosition: '70%' },
     { number: '03', title: '部品検査・交換', description: '摩耗部品の交換と精密測定', image: '/images/parts_inspection_and_exchange.png' },
     { number: '04', title: '組立・調整', description: '熟練技術者による精密組立', image: '/images/assembly_adjustment.png' },
     { number: '05', title: '性能検査', description: '実負荷テストによる性能確認', image: '/images/performance_inspection.png' },
@@ -158,6 +158,7 @@ const RebuiltPage = () => {
                     alt={step.title}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: step.imagePosition ? `center ${step.imagePosition}` : 'center' }}
                   />
                   <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     {step.number}

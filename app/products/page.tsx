@@ -25,15 +25,6 @@ const ProductsPage = () => {
       color: 'from-blue-500 to-blue-700'
     },
     {
-      title: 'オートマチックトランスミッション（AT）',
-      description: '2~10トン超車両対応の自動変速機',
-      warranty: '対応メーカー：いすゞ、日野、三菱ふそう',
-      features: ['電子制御対応', '精密調整', '性能テスト実施'],
-      image: '/images/transmission_2tAT.png',
-      imageType: 'file',
-      color: 'from-green-500 to-green-700'
-    },
-    {
       title: 'スムーサー',
       description: 'いすゞのAMT（自動MT）システム',
       warranty: '対応メーカー：いすゞ',

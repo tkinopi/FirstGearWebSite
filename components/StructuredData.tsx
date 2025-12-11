@@ -3,7 +3,7 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'FirstGear',
-    description: '自動車電装品リビルト事業を通じて持続可能な社会に貢献',
+    description: '自動車マニュアルトランスミッションリビルト事業を通じて持続可能な社会に貢献',
     url: 'https://www.firstgeardirect.com',
     logo: 'https://www.firstgeardirect.com/logo.png', // ロゴ画像のURLを追加してください
     sameAs: [
@@ -31,7 +31,7 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'FirstGear',
-    description: 'なおす、つながる、ひろがっていく。自動車電装品リビルト事業から世界へ',
+    description: 'なおす、つながる、ひろがっていく。自動車マニュアルトランスミッションリビルト事業から世界へ',
     url: 'https://www.firstgeardirect.com',
     potentialAction: {
       '@type': 'SearchAction',

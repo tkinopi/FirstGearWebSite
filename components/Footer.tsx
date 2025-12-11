@@ -38,12 +38,12 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <h2 className="text-2xl font-bold text-accent">FirstGear</h2>
-              <p className="text-sm text-gray-400 mt-2">
+              {/* <p className="text-sm text-gray-400 mt-2">
                 なおす、つながる、ひろがっていく。
-              </p>
+              </p> */}
             </div>
             <p className="text-sm text-gray-400 mb-4">
-              自動車電装品リビルト事業を通じて、
+              自動車マニュアルトランスミッションリビルト事業を通じて、
               持続可能な社会の実現に貢献します。
             </p>
             <div className="text-sm text-gray-400 mb-4">
