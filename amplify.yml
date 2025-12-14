@@ -6,6 +6,9 @@ frontend:
         - npm ci
     build:
       commands:
+        - echo "CONTACT_EMAIL_TO=$CONTACT_EMAIL_TO" >> .env.production
+        - echo "CONTACT_EMAIL_FROM=$CONTACT_EMAIL_FROM" >> .env.production
+        - echo "AWS_REGION=$AWS_REGION" >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
