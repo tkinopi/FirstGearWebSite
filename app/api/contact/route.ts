@@ -41,8 +41,16 @@ export async function POST(request: NextRequest) {
     const toEmail = process.env.CONTACT_EMAIL_TO
     const fromEmail = process.env.CONTACT_EMAIL_FROM || process.env.CONTACT_EMAIL_TO
 
+    // デバッグログ
+    console.log('Environment check:', {
+      hasToEmail: !!toEmail,
+      hasFromEmail: !!fromEmail,
+      region: process.env.AWS_REGION,
+      nodeEnv: process.env.NODE_ENV,
+    })
+
     if (!toEmail) {
-      console.error('CONTACT_EMAIL_TO is not set')
+      console.error('CONTACT_EMAIL_TO is not set. Available env keys:', Object.keys(process.env).filter(k => k.startsWith('CONTACT') || k.startsWith('AWS')))
       return NextResponse.json(
         { error: '送信先メールアドレスが設定されていません' },
         { status: 500 }
