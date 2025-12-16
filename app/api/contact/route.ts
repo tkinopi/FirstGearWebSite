@@ -2,14 +2,13 @@ import { NextRequest, NextResponse } from 'next/server'
 import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
 
 const sesClient = new SESClient({
-  region: process.env.AWS_REGION || 'ap-northeast-1',
-  // Amplify上ではIAMロールから自動的に認証情報を取得
-  // ローカル開発時は環境変数から取得
-  ...(process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY
+  region: process.env.SES_REGION || process.env.AWS_REGION || 'ap-northeast-1',
+  // 認証情報を環境変数から取得
+  ...(process.env.SES_ACCESS_KEY_ID && process.env.SES_SECRET_ACCESS_KEY
     ? {
         credentials: {
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+          accessKeyId: process.env.SES_ACCESS_KEY_ID,
+          secretAccessKey: process.env.SES_SECRET_ACCESS_KEY,
         },
       }
     : {}),

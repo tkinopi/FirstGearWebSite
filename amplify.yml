@@ -8,7 +8,9 @@ frontend:
       commands:
         - echo "CONTACT_EMAIL_TO=$CONTACT_EMAIL_TO" >> .env.production
         - echo "CONTACT_EMAIL_FROM=$CONTACT_EMAIL_FROM" >> .env.production
-        - echo "AWS_REGION=$AWS_REGION" >> .env.production
+        - echo "SES_REGION=$SES_REGION" >> .env.production
+        - echo "SES_ACCESS_KEY_ID=$SES_ACCESS_KEY_ID" >> .env.production
+        - echo "SES_SECRET_ACCESS_KEY=$SES_SECRET_ACCESS_KEY" >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
