@@ -29,10 +29,9 @@ export default function Home() {
   ]
 
   const features = [
-    { title: '高品質保証', description: '厳格な品質管理体制' },
-    { title: '環境配慮', description: 'SDGsへの積極的な取り組み' },
-    { title: 'グローバル展開', description: 'バングラデシュを中心に海外展開' },
-    { title: '技術研修', description: '国際的な技術者育成プログラム' },
+    { title: '高品質保証', description: '厳格な品質管理体制で、信頼性の高い製品をお届けします', icon: <FaCheckCircle /> },
+    { title: '環境配慮', description: 'リビルト事業を通じたSDGsへの積極的な取り組み', icon: <FaRecycle /> },
+    { title: 'グローバル展開', description: '海外事業と国際パートナーシップ', icon: <FaGlobeAsia /> },
   ]
 
   return (
@@ -161,21 +160,21 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg text-center"
+                transition={{ delay: index * 0.15 }}
+                className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               >
-                <div className="text-4xl text-primary mb-4">
-                  <FaCheckCircle />
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-5 text-white text-2xl">
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>

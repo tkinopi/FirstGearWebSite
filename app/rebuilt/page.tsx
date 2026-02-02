@@ -39,9 +39,8 @@ const RebuiltPage = () => {
     { number: '01', title: '受入検査', description: '詳細な初期診断と状態確認', image: '/images/acceptance_inspection.png' },
     { number: '02', title: '分解・洗浄', description: '専用設備による完全分解と洗浄', image: '/images/washing.png', imagePosition: '70%' },
     { number: '03', title: '部品検査・交換', description: '摩耗部品の交換と精密測定', image: '/images/parts_inspection_and_exchange.png' },
-    { number: '04', title: '組立・調整', description: '熟練技術者による精密組立', image: '/images/assembly_adjustment.png' },
-    { number: '05', title: '性能検査', description: '実負荷テストによる性能確認', image: '/images/performance_inspection.png' },
-    { number: '06', title: '出荷', description: '厳格な最終検査後、迅速配送', image: '/images/shipping.png' }
+    { number: '04', title: '性能検査', description: '実負荷テストによる性能確認', image: '/images/performance_inspection.png' },
+    { number: '05', title: '出荷', description: '厳格な最終検査後、迅速配送', image: '/images/shipping.png' }
   ]
 
   const benefits = [
@@ -139,7 +138,7 @@ const RebuiltPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">リビルトプロセス</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              厳格な品質管理のもと、6つのステップで確実な再生を実現
+              厳格な品質管理のもと、5つのステップで確実な再生を実現
             </p>
           </motion.div>
 

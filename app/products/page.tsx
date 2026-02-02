@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { FaTools, FaRecycle, FaLeaf, FaShieldAlt, FaGlobe, FaCheckCircle, FaAward, FaIndustry } from 'react-icons/fa'
+import { FaTools, FaRecycle, FaLeaf, FaShieldAlt, FaGlobe, FaCheckCircle } from 'react-icons/fa'
 
 const ProductsPage = () => {
   const router = useRouter()
@@ -240,38 +240,40 @@ const ProductsPage = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                <FaAward className="text-5xl text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">ISO9001認証</h3>
-                <p className="text-gray-600">品質マネジメントシステムの国際規格を取得</p>
+                <div className="relative h-48 w-full bg-gray-50">
+                  <Image
+                    src="/images/zidousyasyou.png"
+                    alt="自動車商"
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
+                <div className="p-6 text-center flex-1 flex flex-col justify-center">
+                  <h3 className="text-xl font-bold mb-3">自動車商</h3>
+                  <p className="text-gray-600">自動車商としての認可を取得</p>
+                </div>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                <FaIndustry className="text-5xl text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">自動車整備認証</h3>
-                <p className="text-gray-600">国土交通省認定の自動車整備工場</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white rounded-xl p-8 shadow-lg"
-              >
-                <FaLeaf className="text-5xl text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">環境認証</h3>
-                <p className="text-gray-600">環境に配慮したリサイクル事業者として認定</p>
+                <div className="h-48 bg-gray-50 flex items-center justify-center">
+                  <FaLeaf className="text-7xl text-green-600" />
+                </div>
+                <div className="p-6 text-center flex-1 flex flex-col justify-center">
+                  <h3 className="text-xl font-bold mb-3">環境認証</h3>
+                  <p className="text-gray-600">環境に配慮したリサイクル事業者として認定</p>
+                </div>
               </motion.div>
             </div>
           </div>
