@@ -5,7 +5,7 @@ export default function StructuredData() {
     name: 'FirstGear',
     description: '自動車マニュアルトランスミッションリビルト事業を通じて持続可能な社会に貢献',
     url: 'https://www.firstgeardirect.com',
-    logo: 'https://www.firstgeardirect.com/logo.png', // ロゴ画像のURLを追加してください
+    logo: 'https://www.firstgeardirect.com/images/company_logo.png',
     sameAs: [
       // SNSアカウントがあれば追加してください
       // 'https://www.facebook.com/firstgear',

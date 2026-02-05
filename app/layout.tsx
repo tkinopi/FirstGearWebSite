@@ -54,6 +54,11 @@ export const metadata: Metadata = {
     description: 'なおす、とどける、みらいへつなぐ。自動車マニュアルトランスミッションリビルト事業から世界へ',
     images: ['/og-image.png'], // OGP画像を用意してください
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,

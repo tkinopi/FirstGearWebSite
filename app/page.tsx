@@ -48,11 +48,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            なおす、
-            <br />
-            とどける、
-            <br />
-            <span className="heading-gradient">みらいへつなぐ。</span>
+            <span className="heading-gradient">命を吹き込むリビルト技術</span>
           </motion.h1>
           
           <motion.p
@@ -238,7 +234,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              一緒に未来を創りませんか？
+              見えない部分に、誇りを持てる仕事
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               FirstGearでは、意欲的な人材を募集しています。
