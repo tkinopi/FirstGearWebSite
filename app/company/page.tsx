@@ -99,7 +99,7 @@ const CompanyPage = () => {
               企業情報
             </h1>
             <p className="text-xl text-gray-700">
-              半世紀にわたる技術と信頼で、未来のモビリティを支えます
+              技術と信頼で、未来のモビリティを支えます
             </p>
           </div>
         </motion.div>

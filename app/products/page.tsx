@@ -166,7 +166,7 @@ const ProductsPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">FirstGearの品質へのこだわり</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              半世紀にわたる経験と最新技術で、お客様に最高品質をお届けします
+              経験と最新技術で、お客様に最高品質をお届けします
             </p>
           </motion.div>
 

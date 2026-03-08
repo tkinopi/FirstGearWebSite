@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            <span className="heading-gradient">命を吹き込むリビルト技術</span>
+            <span className="heading-gradient">命を吹き込む<br />リビルト技術</span>
           </motion.h1>
           
           <motion.p
