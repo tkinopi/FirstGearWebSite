@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FaCheckCircle, FaGlobeAsia, FaRecycle, FaCogs, FaUsers, FaRocket } from 'react-icons/fa'
+import { FaCheckCircle, FaRecycle, FaCogs, FaWrench } from 'react-icons/fa'
 import HeroSlideshow from '@/components/HeroSlideshow'
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
   const features = [
     { title: '高品質保証', description: '厳格な品質管理体制で、信頼性の高い製品をお届けします', icon: <FaCheckCircle /> },
     { title: '環境配慮', description: 'リビルト事業を通じたSDGsへの積極的な取り組み', icon: <FaRecycle /> },
-    { title: 'グローバル展開', description: '海外事業と国際パートナーシップ', icon: <FaGlobeAsia /> },
+    { title: '技術力', description: '熟練の職人による精密なリビルト作業', icon: <FaWrench /> },
   ]
 
   return (

@@ -18,7 +18,7 @@ const ProductsPage = () => {
     {
       title: 'マニュアルトランスミッション（MT）',
       description: '2~10トン超車両対応の手動変速機',
-      warranty: '対応メーカー：いすゞ、日野、三菱ふそう',
+      warranty: '対応メーカー：いすゞ、日野、三菱ふそう、その他',
       features: ['完全分解整備', '長期使用前提', 'フルオーバーホール'],
       image: '/images/transmission_2tMT.png',
       imageType: 'file',
@@ -35,8 +35,8 @@ const ProductsPage = () => {
     },
     {
       title: 'デュオニック',
-      description: '日野のAMT（自動MT）システム',
-      warranty: '対応メーカー：日野',
+      description: '三菱ふそうのAMT（自動MT）システム',
+      warranty: '対応メーカー：三菱ふそう',
       features: ['AMT専門技術', '電子制御対応', '完全整備'],
       image: '/images/DUONIC.png',
       imageType: 'file',
@@ -44,8 +44,8 @@ const ProductsPage = () => {
     },
     {
       title: 'GSU（ギアシフトユニット）',
-      description: '三菱ふそうのAMT（自動MT）システム',
-      warranty: '対応メーカー：三菱ふそう',
+      description: 'いすゞ、その他のAMT（自動MT）システム',
+      warranty: '対応メーカー：いすゞ、三菱ふそう、その他',
       features: ['AMT専門技術', '電子制御対応', '分解'],
       image: '/images/GSU.png',
       imageType: 'file',
