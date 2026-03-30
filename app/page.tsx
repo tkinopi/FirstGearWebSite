@@ -129,9 +129,9 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
-                  <button className="mt-4 text-primary font-semibold hover:text-secondary transition-colors">
+                  <Link href="/products" className="mt-4 inline-block text-primary font-semibold hover:text-secondary transition-colors">
                     詳細を見る →
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
